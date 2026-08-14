@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow_function</title>
+</head>
+<body>
+   <script>
+    const car = () => {
+        let carName = "Volvo";
+        let carCost = 20000;
+        let carCapacity = 5;
+    }
+    const aeroplane = () => {
+        let planeName = "Boeing";
+        let planeCost = 100000;
+        let planeCapacity = 200;
+    }
+    const ship = () => {
+        let shipName = "Titanic";
+        let shipCost = 500000;
+        let shipCapacity = 3000;
+    }
+    let booking = prompt ("What do you want to book? (car, aeroplane, ship)");
+    if (booking == "car") {
+        car();
+        let seat = prompt ("How many seats do you want to book?");
+        if (seat <= carCapacity) {
+            document.write("Total cost of booking " + seat + " seats in " + carName + " is " + (seat * carCost) + "<br>");
+            document.write("You have booked " + seat + " seats in " + carName + " which costs " + carCost + "<br>");
+        } else {
+            document.write("Sorry, we only have " + carCapacity + " seats available in " + carName + "<br>");
+        }
+    } else if (booking == "aeroplane") {
+        aeroplane();
+        let seat = prompt ("How many seats do you want to book?");
+        if (seat <= planeCapacity) {
+            document.write("Total cost of booking " + seat + " seats in " + planeName + " is " + (seat * planeCost) + "<br>");
+            document.write("You have booked " + seat + " seats in " + planeName + " which costs " + planeCost + "<br>");
+        } else {
+            document.write("Sorry, we only have " + planeCapacity + " seats available in " + planeName + "<br>");
+        }
+    } else if (booking == "ship") {
+        ship();
+        let seat = prompt ("How many seats do you want to book?");
+        if (seat <= shipCapacity) {
+            document.write("Total cost of booking " + seat + " seats in " + shipName + " is " + (seat * shipCost) + "<br>");
+            document.write("You have booked " + seat + " seats in " + shipName + " which costs " + shipCost + "<br>");
+        } else {
+            document.write("Sorry, we only have " + shipCapacity + " seats available in " + shipName + "<br>");
+        }
+    } else {
+        document.write("Sorry, we don't have that option available<br>");
+    }
+
+   </script>
+</body>
+</html>
