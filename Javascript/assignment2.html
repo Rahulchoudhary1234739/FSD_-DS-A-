@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student_database</title>
+</head>
+<body>
+    <script>
+        const student = [{
+            name:"john",
+            rollno: 123,
+            branch:"b.tech"  
+        }
+        ,{
+            name:"jane",
+            rollno: 456,
+            branch:"bca"  
+        }
+        ,{
+            name:"doe",
+            rollno: 789,
+            branch:"b.tech"  
+        }];
+        
+        student_details = prompt("Enter the branch name to filter students:");
+        const details = student.filter(student => student.branch === student_details);
+        
+        console.log(details);
+    </script>
+    
+</body>
+</html>
