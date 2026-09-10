@@ -3,7 +3,7 @@ console.log("Task 2");
 
 setTimeout(() => {
     console.log("Task 3");
-}, 200000);
+}, 2000);
 
 console.log("Task 4");
 console.log("Task 5");
